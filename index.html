@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+	<title>MiXx</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" media="screen" rel="stylesheet" type="text/css" />
+	
+	<!-- Framework -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/wavesurfer.min.js"></script>
+</head>
+<body>
+
+	<div class="container-fluid">
+		<div id="connected-or-disconnected" class="row header-top">
+		</div>
+	</div>
+	
+	<div class="container-fluid" style="margin-left:5px;margin-right:5px;">
+		<div class="row">
+			<div class="col-md-12" style="background:#dddddd;height:50px;">
+			qsdqd
+			</div>
+		</div>
+		<div class="row" style="border: 1px solid #FF0000;">
+				<div class="col-md-2">
+				</div>
+			<div class="col-md-10">
+				<div id="wave">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+		var wavesurfer = Object.create(WaveSurfer);
+	
+		wavesurfer.init({
+		    container: document.querySelector('#wave'),
+		    backend: 'MediaElement',
+		    fillParent: false
+		});
+		
+		wavesurfer.load('fx1.mp3');
+	</script>
+	<div id="result"></div>
+</body>
+<script src="js/userPrototype.js"></script>
+<script src="libs/functions.js"></script>
+<script src="js/index.js"></script>
+</html>
